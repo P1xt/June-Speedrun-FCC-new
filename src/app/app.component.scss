@@ -1,0 +1,13 @@
+.App {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+    &__header,
+    &__footer {
+        grid-column: span 2;
+    }
+    &__content {
+        
+    }
+}

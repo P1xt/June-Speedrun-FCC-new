@@ -1,0 +1,10 @@
+.Home {
+    margin: 20px;
+    h1 {
+        text-align: center;
+    }
+    &__notes {
+        display: grid;
+        grid-gap: 20px;
+    }
+}
