@@ -1,0 +1,73 @@
+.Tribute {
+    width: calc(100%-40px);
+    margin: 10px 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    &__header {
+        text-align: center;
+    }
+
+    &__hero {
+        text-align: center;
+        width: 100%;
+         &__image {
+            width: 100%;
+            img {
+                display: block;
+                max-width: 400px;
+                width: 80%;
+                margin: 10px auto;
+            }
+        } 
+        &__caption {
+            text-align: center;
+            width: 100%;
+        }
+    }
+    &__details {
+        margin: 20px 40px;
+        :not(pre) > code[class*="language-"], pre[class*="language-"] {
+            background: #2d2d2d;
+        }
+        pre[class*="language-"] {
+            padding: 1em;
+            margin: .5em 0;
+            overflow: auto;
+        }
+        code[class*="language-"], pre[class*="language-"] {
+            color: #ccc;
+            font-family: Consolas, Monaco, 'Andale Mono', monospace;
+            direction: ltr;
+            text-align: left;
+            white-space: pre;
+            word-spacing: normal;
+            word-break: normal;
+            line-height: 1.5;
+            -moz-tab-size: 4;
+            -o-tab-size: 4;
+            tab-size: 4;
+            -webkit-hyphens: none;
+            -moz-hyphens: none;
+            -ms-hyphens: none;
+            hyphens: none;
+        }
+        pre {
+            background-color: #333;
+            border-radius: 3px;
+            padding: .75em 1.2em;
+            font-size: .8em;
+            white-space: pre-wrap;
+            color: #f0f0f0;
+            overflow-x: auto;
+        }
+        
+        pre, xmp, plaintext, listing {
+            display: block;
+            font-family: monospace;
+            white-space: pre;
+            margin: 1em 0px;
+        }
+    }
+
+}

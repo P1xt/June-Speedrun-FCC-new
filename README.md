@@ -10,7 +10,7 @@ Started: June 7, 2018
 Completed:     
 
 - [x] - Lessons
-- [ ] - Build a Tribute Page
+- [x] - Build a Tribute Page
 - [ ] - Build a Survey Form
 - [ ] - Build a Product Landing Page
 - [ ] - Build a Technical Documentation Page

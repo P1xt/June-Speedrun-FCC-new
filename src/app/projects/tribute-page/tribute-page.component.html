@@ -1,0 +1,77 @@
+<div id="main" class="Tribute">
+  <header class="Tribute__header">
+    <h1 id="title">Tribute to Node.js</h1>
+  </header>
+  <main class="Tribute__content">
+    <section class="Tribute__hero">
+      <div id="img-div" class="Tribute__hero__image">
+        <img src="/assets/node-js.png" alt="Node.js logo" id="image">
+        <div id="img-caption" class="Tribute__hero__caption">Node.js logo from nodejs.org</div>
+      </div>
+
+    </section>
+    <section id="tribute-info" class="Tribute__details">
+      <article>
+        <h1 id="header-about-node-js">About Node.js&#xAE;
+          <a name="about-node-js" class="anchor" href="#about-node-js" aria-labelledby="header-about-node-js"></a>
+        </h1>
+        <p>As an asynchronous event driven JavaScript runtime, Node is designed to build scalable network applications. In the
+          following &quot;hello world&quot; example, many connections can be handled concurrently. Upon each connection the
+          callback is fired, but if there is no work to be done, Node will sleep.</p>
+        <pre class="language-javascript"><code class="language-javascript">
+    const http = require('http');
+
+    const hostname = '127.0.0.1';
+    const port = 3000;
+    
+    const server = http.createServer((req, res) => "{{ '{' }}"
+      res.statusCode = 200;
+      res.setHeader('Content-Type', 'text/plain');
+      res.end('Hello World\n');
+    });
+    
+    server.listen(port, hostname, () => "{{ '{' }}"
+      console.log(`Server running at http://$"{{ '{' }}"hostname}:$"{{ '{' }}"port}/`);
+    });    
+    </code></pre>
+        <p>This is in contrast to today&apos;s more common concurrency model where OS threads are employed. Thread-based networking
+          is relatively inefficient and very difficult to use. Furthermore, users of Node are free from worries of dead-locking
+          the process, since there are no locks. Almost no function in Node directly performs I/O, so the process never blocks.
+          Because nothing blocks, scalable systems are very reasonable to develop in Node.</p>
+        <p>If some of this language is unfamiliar, there is a full article on
+          <a href="https://nodejs.org/en/docs/guides/blocking-vs-non-blocking/">Blocking vs Non-Blocking</a>.</p>
+        <hr>
+        <p>Node is similar in design to, and influenced by, systems like Ruby&apos;s
+          <a href="http://rubyeventmachine.com/">Event Machine</a> or Python&apos;s
+          <a href="http://twistedmatrix.com/">Twisted</a>. Node takes the event model a bit further. It presents an
+          <a href="https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/">event loop</a> as a runtime construct instead of as a library. In other systems there is always a blocking call
+          to start the event-loop. Typically behavior is defined through callbacks at the beginning of a script and at the
+          end starts a server through a blocking call like
+          <code>EventMachine::run()</code>. In Node there is no such start-the-event-loop call. Node simply enters the event loop after executing the input
+          script. Node exits the event loop when there are no more callbacks to perform. This behavior is like browser JavaScript
+          &#x2014; the event loop is hidden from the user.</p>
+        <p>HTTP is a first class citizen in Node, designed with streaming and low latency in mind. This makes Node well suited
+          for the foundation of a web library or framework.
+        </p>
+        <p>Just because Node is designed without threads, doesn&apos;t mean you cannot take advantage of multiple cores in your
+          environment. Child processes can be spawned by using our
+          <a href="https://nodejs.org/api/child_process.html#child_process_child_process_fork_modulepath_args_options">
+            <code>child_process.fork()</code>
+          </a> API, and are designed to be easy to communicate with. Built upon that same interface is the
+          <a href="https://nodejs.org/api/cluster.html">
+            <code>cluster</code>
+          </a> module, which allows you to share sockets between processes to enable load balancing over your cores.</p>
+
+      </article>
+      <hr>
+      <article>
+        All content on this page is from the
+        <a href="https://nodejs.org/en/about/" target="_blank" id="tribute-link">Node.js official docs</a>. I wholeheartedly recommend reading them in detail if you are interested in Node.js development.
+        The Node.js docs are fantastic.
+      </article>
+
+    </section>
+  </main>
+
+
+</div>

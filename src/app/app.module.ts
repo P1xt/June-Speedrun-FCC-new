@@ -17,9 +17,10 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { NavComponent } from './nav/nav.component';
+import { TributePageComponent } from './projects/tribute-page/tribute-page.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, HomeComponent, NavComponent],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, HomeComponent, NavComponent, TributePageComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
